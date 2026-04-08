@@ -40,7 +40,7 @@ enum BluetoothCommands {
 };
 
 //bt command 
-int bluetoothValue = OFF; // Store the current running command (default to OFF)
+int bluetoothValue = TWINKLE; // Store the current running command (default to OFF)
 uint8_t brightness = 60; // Brightness value
 bool waitingForBrightness = false;
 bool waitingForStaticColor = false;
