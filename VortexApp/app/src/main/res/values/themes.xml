@@ -1,0 +1,27 @@
+<resources>
+    <style name="Theme.VortexApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name ="vortexBgPrimary">@color/vortex_light_bg_primary</item>
+        <item name ="vortexBgSecondary">@color/vortex_light_bg_secondary</item>
+        <item name ="vortexTextPrimary">@color/vortex_light_text_primary</item>
+        <item name ="vortexTextSecondary">@color/vortex_light_text_secondary</item>
+
+        <item name ="vortexUiMain">@color/ui_main_color</item>
+        <item name ="vortexUiSecondary">@color/vortex_light_ui_secondary</item>
+
+        <item name ="vortexRipple">@color/vortex_light_ripple</item>
+        <item name ="vortexRoundedBg">@color/vortex_light_rounded_bg</item>
+
+        <item name ="vortexIconPrimary">@color/vortex_light_icon_primary</item>
+        <item name ="vortexFocusRing">@color/vortex_light_focus_ring</item>
+        <item name ="vortexSeparator">@color/vortex_light_separator</item>
+        <item name ="vortexPopupMenuBg">@color/vortex_light_popup_menu_background</item>
+
+        <item name="vortexButtonPurple">@color/purple_fill</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="colorSecondary">@color/ui_main_color</item>
+        <item name="colorControlActivated">@color/ui_main_color</item>
+        <item name="colorControlHighlight">@color/vortex_light_ripple</item>
+        <item name="launcherBackground">@color/vortex_light_bg_primary</item>
+    </style>
+</resources>

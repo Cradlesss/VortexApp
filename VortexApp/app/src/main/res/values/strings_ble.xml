@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notifications -->
+    <string name="notif_ble_connecting">Connecting...</string>
+    <string name="notif_ble_connected">Connected</string>
+    <string name="notif_ble_disconnected">Disconnected</string>
+
+    <!-- SandBox -->
+    <string name="ble_sandbox_mac_hint">Device MAC (AA:BB:CC:DD:EE:FF)</string>
+    <string name="ble_sandbox_connection_status">Connection: -</string>
+    <string name="ble_sandbox_tv_state">State: -</string>
+    <string name="ble_sandbox_send_animation_5">Send Animation 5</string>
+    <string name="ble_sandbox_send_animation_7">Send Animation 7</string>
+    <string name="ble_sandbox_set_brightness_180">Set Brightness 180</string>
+    <string name="ble_sandbox_set_red">Set RGB (255, 0, 0)</string>
+    <string name="ble_sandbox_set_green">Set RGB (0, 255, 0)</string>
+    <string name="ble_sandbox_send_ping">Ping</string>
+
+
+    <string name="bt_adapter_off">Bluetooth not supported or disabled on this device.</string>
+    <string name="request_state">Request State</string>
+</resources>

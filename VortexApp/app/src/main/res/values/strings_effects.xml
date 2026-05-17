@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="effects_title">Effects</string>
+    <string name="effect_twinkle">Twinkle</string>
+    <string name="effect_jinx">Jinx</string>
+    <string name="effect_transition">Transition</string>
+    <string name="effect_blue_b">BlueB</string>
+    <string name="effect_rainbow">Rainbow</string>
+    <string name="effect_beat_r">BeatR</string>
+    <string name="effect_run_red">Run Red</string>
+    <string name="effect_raw_noise">Raw Noise</string>
+    <string name="effect_moving_rainbow">Moving Rainbow</string>
+    <string name="effect_wave">Wave</string>
+    <string name="effect_blight_b">BlightB</string>
+    <string name="effect_static_color">Static Color</string>
+    <string name="effect_unknown">Unknown</string>
+    <string name="effect_off">Off</string>
+    <string name="effect_unknown_format">Unknown (%1$d)</string>
+    <string name="effect_applied_toast">Effect: %1$s</string>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+
+    <application
+        android:name=".app.VortexApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VortexApp">
+
+        <!-- Home Screen Activity -->
+        <activity android:name=".ui.home.HomeScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- BluetoothLE Service -->
+        <service
+            android:name=".ble.service.BackgroundBluetoothLeService"
+            android:enabled="true" android:exported="false"
+            android:foregroundServiceType="connectedDevice"/>
+
+        <!-- BLE Sandbox Activity -->
+        <activity android:name=".ui.sandbox.BleSandboxActivity"
+            android:exported="false"/>
+
+        <!-- Select Device Activity -->
+        <activity android:name=".ui.selectdevice.SelectDeviceActivity"
+            android:exported="false"/>
+
+        <!-- Device Item Settings Activity -->
+        <activity android:name=".ui.selectdevice.device_item_settings.DeviceItemSettings"
+            android:exported="false"/>
+
+        <!-- Solid Color Activity -->
+        <activity android:name=".ui.color.SolidColorActivity"
+            android:exported="false"/>
+
+        <!-- Effects Activity -->
+        <activity android:name=".ui.effects.EffectsActivity"
+            android:exported="false"/>
+
+        <!-- Settings Activity -->
+        <activity android:name=".ui.settings.SettingsActivity"
+            android:exported="false"/>
+
+        <!-- NotificationActionReceiver -->
+        <receiver android:name=".core.notify.NotificationActionReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.project_void.vortexapp.NOTIF_DISCONNECT"/>
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

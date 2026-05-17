@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/effect_title"
+        android:theme="@style/ripple_btn.purple_outline"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/fg_ripple_button"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="?attr/vortexTextPrimary"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+</FrameLayout>

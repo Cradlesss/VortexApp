@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_screen_title">26sp</dimen>
+    <dimen name="corner_radius_sm">8dp</dimen>
+    <dimen name="corner_radius_md">12dp</dimen>
+    <dimen name="corner_radius_lg">16dp</dimen>
+    <dimen name="padding_md">8dp</dimen>
+    <dimen name="padding_sm">4dp</dimen>
+    <dimen name="stroke_thin">1dp</dimen>
+    <dimen name="stroke_regular">2dp</dimen>
+    <dimen name="coach_popup_y_offset">-2dp</dimen>
+    <dimen name="popup_item_min_height">48dp</dimen>
+    <dimen name="popup_item_pad_h">16dp</dimen>
+    <dimen name="popup_max_width">280dp</dimen>
+</resources>

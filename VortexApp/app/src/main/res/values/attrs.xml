@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="corner_radius" format="dimension"/>
+    <attr name="padding_h" format="dimension"/>
+    <attr name="padding_v" format="dimension"/>
+    <attr name="fill_color" format="color"/>
+    <attr name="ripple_color" format="color"/>
+    <attr name="stroke_width" format="dimension"/>
+    <attr name="stroke_color" format="color"/>
+    <attr name="vortexBgPrimary" format="color"/>
+    <attr name="vortexBgSecondary" format="color"/>
+    <attr name="vortexTextPrimary" format="color"/>
+    <attr name="vortexTextSecondary" format="color"/>
+    <attr name="vortexUiMain" format="color"/>
+    <attr name="vortexUiSecondary" format="color"/>
+    <attr name="vortexRipple" format="color"/>
+    <attr name="vortexRoundedBg" format="color"/>
+    <attr name="vortexIconPrimary" format="color"/>
+    <attr name="vortexFocusRing" format="color"/>
+    <attr name="vortexSeparator" format="color"/>
+    <attr name="vortexButtonPurple" format="color"/>
+    <attr name="vortexPopupMenuBg" format="color"/>
+    <attr name="launcherBackground" format="color"/>
+</resources>

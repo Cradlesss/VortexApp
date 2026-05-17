@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- App -->
+    <string name="app_name">VortexApp</string>
+
+    <!-- Bottom Navigation -->
+    <string name="bottom_navigation_menu_home">Home</string>
+    <string name="bottom_navigation_menu_effects">Effects</string>
+    <string name="bottom_navigation_menu_solid_color">Solid Color</string>
+    <string name="bottom_navigation_menu_settings">Settings</string>
+
+    <!-- Generic UI actions (used across multiple screens) -->
+    <string name="back_btn_desc">Back Button</string>
+    <string name="prev">Previous</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="done">Done</string>
+    <string name="save">Save</string>
+    <string name="reset">Reset</string>
+    <string name="refresh">Refresh</string>
+    <string name="help">Help</string>
+    <string name="arrow">›</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+
+    <!-- Notification Channels -->
+    <string name="notif_channel_ble_name">BLE Connection</string>
+    <string name="notif_channel_ble_desc">Shows active Bluetooth connection status</string>
+    <string name="notif_channel_general_name">General</string>
+    <string name="notif_channel_general_desc">General app notifications</string>
+
+    <!-- UI Labels -->
+    <string name="rgb_r_label">R: %1$d</string>
+    <string name="rgb_g_label">G: %1$d</string>
+    <string name="rgb_b_label">B: %1$d</string>
+    <string name="demo_device_name">Demo Device</string>
+    <string name="vortex_debug_info_label">Vortex Debug Info</string>
+
+    <!-- Sandbox Labels -->
+    <string name="ble_sandbox_err_address_empty">Address is empty</string>
+    <string name="ble_sandbox_connecting_to">Connecting to %1$s</string>
+    <string name="ble_sandbox_ping_result_title">Ping Result</string>
+    <string name="ble_sandbox_pong_format">Pong in %1$d ms (token %2$d)</string>
+    <string name="ble_sandbox_pong_simple_format">Pong in %1$d ms</string>
+
+</resources>

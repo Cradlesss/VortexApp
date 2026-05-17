@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/refresh_device_list"
+        android:title="@string/select_device_refresh_device_list"/>
+    <item
+        android:id="@+id/go_to_sandbox"
+        android:title="@string/select_device_go_to_sandbox"/>
+    <item
+        android:id="@+id/open_bt_settings"
+        android:title="@string/open_bluetooth_settings"/>
+    <item
+        android:id="@+id/help"
+        android:title="@string/help"/>
+</menu>

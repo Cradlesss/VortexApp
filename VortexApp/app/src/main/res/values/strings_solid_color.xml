@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Solid Color screen -->
+    <string name="activity_solid_color_title">Solid Color</string>
+    <string name="apply_color_button">Apply Color</string>
+    <string name="invalid_hex_color">Invalid Hex Value</string>
+    <string name="custom_color_hex_label">Custom Color (Hex)</string>
+    <string name="hex_input_prefix">#</string>
+
+    <!-- Saved color slots -->
+    <string name="saved_color_empty">Save Color</string>
+    <string name="saved_color_with_value">Color Saved</string>
+    <string name="saved_colors_long_press_to_save_label">Saved Colors (Long Press to Save)</string>
+    <string name="save_color_button">Save</string>
+
+</resources>

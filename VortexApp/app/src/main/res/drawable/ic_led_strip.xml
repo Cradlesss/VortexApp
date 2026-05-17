@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:viewportWidth="512"
+        android:viewportHeight="512"
+        android:width="512dp"
+        android:height="512dp">
+
+    <!-- Main body -->
+    <path
+            android:pathData="M389.5 13Q398.5 11.5 400 17.5L411 37.5L412 45.5L408.5 50L390 60.5Q389.9 66.9 385.5 69L227 154.5L390.5 155L392 156.5L392 212.5L389.5 215L240.5 295L227 301L227.5 303L390.5 303L392 304.5L392 360.5L389.5 363L152.5 490L145.5 491L140.5 489L122.5 499L118.5 499L113 495.5L100 471.5L100 467.5L103.5 462L122 451.5L122 447.5L126.5 443L285 357.5L121.5 357L120 355.5L120 299.5L122.5 297L285 211L284.5 209L121.5 209L120 207.5L120 151.5L122.5 149L359.5 22L366.5 21L371.5 23L389.5 13ZM389 20L374 29L382 48L387 53Q397 49 404 43L395 25L391 20L389 20ZM363 27L128 153L126 155L126 201L356 79L384 63L384 60L367 29Q366 26 363 27ZM214 161L137 202L137 203L299 203L376 162L214 161ZM385 163L128 301L126 303L126 349L386 210L386 164L385 163ZM214 309L139 349L138 351L299 351L376 310L214 309ZM385 311L131 447L128 450L128 453L147 485L154 483L268 421L276 419L285 412L386 358L386 312L385 311ZM123 458L107 466L106 469L110 482L119 494L126 493L127 490L131 490L138 484L138 481L132 468L128 461Q125 462 126 460L123 458Z"
+            android:fillColor="?attr/vortexIconPrimary"
+            android:strokeColor="?attr/vortexIconPrimary"
+            android:strokeWidth="1" />
+
+    <path android:pathData="M349.5,51 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M323.5,64 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M298.5,78 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M273.5,91 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M248.5,105 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M223.5,118 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M197.5,132 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M170.5,146 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M145.5,160 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+
+    <path android:pathData="M356.5,196 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M328.5,210 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M300.5,225 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M274.5,239 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M248.5,253 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M222.5,267 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M196.5,281 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M170.5,295 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M145.5,309 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+
+    <path android:pathData="M363.5,339 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M337.5,353 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M310.5,367 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M284.5,381 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M258.5,395 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M232.5,409 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M206.5,423 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M181.5,436 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+    <path android:pathData="M155.5,451 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0Z" android:fillColor="?attr/vortexIconPrimary" />
+
+</vector>

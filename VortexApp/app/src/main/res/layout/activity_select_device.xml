@@ -1,0 +1,143 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/vortexBgPrimary"
+    android:id="@+id/root_layout_select_device"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/activity_select_device_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_select_device_title"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_screen_title"
+        android:textColor="?attr/vortexUiMain"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@+id/select_device_back_button_frame"
+        android:layout_alignTop="@id/select_device_back_button_frame"
+        android:layout_alignBottom="@id/select_device_back_button_frame" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/select_device_scan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toStartOf="@+id/select_device_burger_menu_button_frame"
+        android:theme="@style/ripple_btn.fill_purple"
+        android:background="@drawable/fg_ripple_button"
+        android:elevation="4dp"
+        android:paddingHorizontal="16dp"
+        android:text="@string/select_device_scan_btn"
+        android:textColor="?attr/vortexTextPrimary"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:id="@+id/select_device_back_button_frame"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignTop="@+id/select_device_scan_button"
+        android:layout_alignBottom="@+id/select_device_scan_button"
+        android:theme="@style/ripple_btn.borderless"
+        android:foreground="@drawable/fg_ripple_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="center">
+
+    <ImageButton
+        android:id="@+id/select_device_back_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="@drawable/ic_back_button"
+        android:contentDescription="@string/back_btn_desc"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/select_device_burger_menu_button_frame"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignTop="@+id/select_device_scan_button"
+        android:layout_alignBottom="@+id/select_device_scan_button"
+        android:theme="@style/ripple_btn.borderless"
+        android:foreground="@drawable/fg_ripple_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="center">
+
+    <ImageButton
+        android:id="@+id/select_device_burger_menu_button"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="@drawable/ic_select_device_burger_menu"
+        android:contentDescription="@string/select_device_burger_menu_desc" />
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/select_device_looking_for_new"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:indeterminateTint="?attr/vortexUiMain"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/select_device_device_item_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav_container"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/select_device_scan_button"
+        android:layout_marginTop="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/select_device_device_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rounded_border"
+            android:backgroundTint="?attr/vortexBgSecondary"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottom_nav_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_nav_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:elevation="8dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconTint="@color/bottom_nav_item_tint"
+            app:itemTextColor="@color/bottom_nav_item_tint"
+            app:labelVisibilityMode="labeled"/>
+    </FrameLayout>
+</RelativeLayout>

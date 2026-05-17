@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Generic dialog buttons -->
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+
+    <!-- Permission dialogs -->
+    <string name="perm_location">Location</string>
+    <string name="perm_nearby_devices">Nearby Devices</string>
+    <string name="perm_notification">Notification</string>
+    <string name="perm_location_and_nearby">Location and Nearby Devices</string>
+    <string name="perm_need_permission">We need %1$s permission to continue.</string>
+    <string name="perm_need_this_permission">We need this permission to continue.</string>
+    <string name="perm_required_title">Permission Required</string>
+    <string name="perm_needed_title">Permission Needed</string>
+    <string name="perm_request_action">Request Permission</string>
+    <string name="perm_allow_action">Allow</string>
+
+    <!-- Device Item Settings dialogs -->
+    <string name="rename_device_title">Rename Device</string>
+    <string name="rename_device_hint">Enter a new name for this device</string>
+    <string name="forget_device_title">Forget Device</string>
+    <string name="forget_device_message">Are you sure you want to forget this device?</string>
+
+</resources>

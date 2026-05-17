@@ -1,42 +1,128 @@
-# Project Void – v1
+# Project Void
 
-> **This is the original v1 release, preserved for reference. It is no longer actively developed.**
-> v2 is a complete rewrite and supersedes this version.
+Project Void is an open-source BLE ecosystem for controlling addressable LED strips from an Android device. It is made up of two components:
+
+- **VortexApp** – Android application (API 29+) for discovering, connecting, and controlling compatible devices over Bluetooth Low Energy.
+- **VortexCore** – Firmware for nRF52840-based microcontrollers that receives commands and drives the LED strip.
 
 ---
 
-Project Void is an open-source BLE ecosystem for controlling addressable LED strips from an Android device.
+## How it works
 
-- **Vortex_App** – Android application (API 24+) that connects to and controls BLE devices.
-- **Vortex_Controller** – Arduino firmware for Seeed XIAO nRF52840 Sense.
+1. Flash VortexCore onto a supported nRF52840 board.
+2. Install VortexApp on your Android device.
+3. Open the app, scan for nearby devices, and connect.
+4. Pick a static color or choose an effect from the built-in library.
+5. The app encodes your selection into a compact binary frame and sends it over BLE; VortexCore decodes it and updates the strip in real time.
 
-## Known issues
+---
 
-- Several animations have timing bugs and may behave incorrectly.
-- BLE reconnect is not fully reliable across all Android versions.
-- App was not thoroughly tested below API 26 despite `minSdk = 24`.
-- No persistent state — active effect and color are lost on disconnect.
+## Supported hardware
+
+| Component | Supported |
+|-----------|-----------|
+| Android | API 29 and above (Android 10+) |
+| Microcontroller | Seeed XIAO nRF52840 / nRF52840 Sense |
+| LED strips | Any NeoPixel-compatible strip (WS2812B, SK6812, etc.) |
+
+---
 
 ## Installation
 
-### Vortex_App (Android)
+### VortexApp (Android)
 
 1. Clone the repository.
-2. Open `Vortex_app/` in Android Studio.
-3. Build and install:
+2. Open the `VortexApp/` directory in Android Studio.
+3. Connect an Android device (or use an emulator with BLE support).
+4. Build and install:
 
 ```
 ./gradlew installDebug
 ```
 
-### Vortex_Controller (Firmware)
+Or use the Run button in Android Studio.
 
-1. Open `Vortex_Controller/Vortex_controller/Vortex_controller.ino` in the Arduino IDE.
-2. Install dependencies:
-   - Adafruit Bluefruit nRF52 Library
-   - FastLED
-3. Select board: **Seeed XIAO nRF52840 Sense**
-4. Compile and upload.
+---
+
+### VortexCore (Firmware)
+
+The firmware uses [PlatformIO](https://platformio.org/). You can install it as a VS Code extension or via the CLI.
+
+1. Open the `VortexCore/` directory in VS Code (with the PlatformIO extension) or in the PlatformIO IDE.
+2. Connect your nRF52840 board via USB.
+3. Flash the release build:
+
+```
+pio run -e seeed-release --target upload
+```
+
+To enable serial debug output:
+
+```
+pio run -e seeed-debug --target upload
+```
+
+To run the native unit tests (no hardware required):
+
+```
+pio test -e native
+```
+
+---
+
+## LED Effects
+
+VortexApp ships with the following built-in effects:
+
+| Effect | Description |
+|--------|-------------|
+| Static Color | Solid user-selected color |
+| Rainbow | Classic full-spectrum cycle |
+| Moving Rainbow | Rainbow that flows along the strip |
+| Nebula Surge | Pulsing color surge effect |
+| Beat Blue | Blue-toned beat pulse |
+| Beat Light Blue | Lighter beat pulse variant |
+| Blur Phase Beat | Soft blurred beat phasing |
+| Raw Noise | Organic noise-based randomness |
+| Run Rainbow (Temp) | Travelling rainbow segment |
+| Saw Tooth | Sharp sawtooth brightness wave |
+| Transition With Break | Smooth color transition with pause |
+| Twinkle | Random twinkling points |
+| Wave | Smooth sine wave brightness |
+
+New effects can be added to the firmware by implementing `IEffect` and registering them in the app's `LedEffectRegistry`.
+
+---
+
+## Project structure
+
+```
+Project Void/
+├── VortexApp/          Android application (Gradle, Java)
+│   └── app/src/
+│       ├── ble/        BLE service, session repository, protocol
+│       ├── core/       DI, preferences, permissions, utilities
+│       ├── domain/     Effect registry and models
+│       └── ui/         Activities, adapters, dialogs, coach system
+└── VortexCore/         Firmware (PlatformIO, C++)
+    └── src/
+        ├── ble/        BLE GATT service and protocol
+        └── led/        Effect engine, LED strip abstraction, effects
+```
+
+---
+
+## Contributing
+
+Pull requests are welcome. For significant changes, please open an issue first to discuss the approach.
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the full version history.
+
+---
 
 ## License
 

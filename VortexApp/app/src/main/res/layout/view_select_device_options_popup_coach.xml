@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coach_popup_root"
+    android:orientation="vertical"
+    android:background="@drawable/bg_purple_stroke"
+    android:elevation="10dp"
+    android:paddingVertical="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/coach_menu_refresh"
+            style="@style/popup_menu_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/popup_item_min_height"
+            android:paddingStart="@dimen/popup_item_pad_h"
+            android:paddingEnd="@dimen/popup_item_pad_h"
+            android:gravity="start|center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/select_device_refresh_device_list" />
+
+    <TextView
+            android:id="@+id/coach_menu_sandbox"
+            style="@style/popup_menu_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/popup_item_min_height"
+            android:paddingStart="@dimen/popup_item_pad_h"
+            android:paddingEnd="@dimen/popup_item_pad_h"
+            android:gravity="start|center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/select_device_go_to_sandbox" />
+
+    <TextView
+            android:id="@+id/coach_menu_bt"
+            style="@style/popup_menu_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/popup_item_min_height"
+            android:paddingStart="@dimen/popup_item_pad_h"
+            android:paddingEnd="@dimen/popup_item_pad_h"
+            android:gravity="start|center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/open_bluetooth_settings" />
+
+    <TextView
+            android:id="@+id/coach_menu_help"
+            style="@style/popup_menu_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/popup_item_min_height"
+            android:paddingStart="@dimen/popup_item_pad_h"
+            android:paddingEnd="@dimen/popup_item_pad_h"
+            android:gravity="start|center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/help" />
+</LinearLayout>

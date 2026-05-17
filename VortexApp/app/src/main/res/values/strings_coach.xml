@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Select Device coach content -->
+    <string name="coach_select_device_menu_title">Main menu</string>
+    <string name="coach_select_device_menu_text">Tools for this screen live here: Refresh, Sandbox, Help.</string>
+    <string name="coach_select_device_refresh_title">Refresh</string>
+    <string name="coach_select_device_refresh_text">Clears the current list. It does not auto-scan (by design). Use scan when you’re ready.</string>
+    <string name="coach_select_device_sandbox_title">Sandbox</string>
+    <string name="coach_select_device_sandbox_text">Opens a testing space. Great for checking UI/logic without a real device.</string>
+    <string name="coach_select_device_row_title">Device item</string>
+    <string name="coach_select_device_row_text">Each row shows a device: name, status, signal, and quick actions.</string>
+    <string name="coach_select_device_status_title">Status</string>
+    <string name="coach_select_device_status_text">This shows the current connection state (Disconnected / Connecting / Connected).</string>
+    <string name="coach_select_device_actions_title">Row actions</string>
+    <string name="coach_select_device_actions_text">Open device options like details, rename, or settings.</string>
+    <string name="coach_select_device_scan_title">Scan Button</string>
+    <string name="coach_select_device_scan_text">Search for nearby compatible devices. Keep the device close and powered on.</string>
+    <string name="coach_select_device_bt_title">Bluetooth settings</string>
+    <string name="coach_select_device_bt_text">Opens Android’s Bluetooth panel. Enable Bluetooth, pair a new device, or manage paired devices. Return here when you’re done.</string>
+    <!-- Menu: Help -->
+    <string name="coach_select_device_help_title">Help</string>
+    <string name="coach_select_device_help_text">Replays this guided tour and shows tips specific to this screen. Use it anytime if you get stuck.</string>
+
+    <!-- Device item: device_addr label/area -->
+    <string name="coach_select_device_addr_title">Device address</string>
+    <string name="coach_select_device_addr_text">The device’s unique Bluetooth address (MAC). Use it to confirm the correct device or for troubleshooting. Matches the address in Settings &gt; Bluetooth.</string>
+    <!-- Home coach content -->
+    <string name="coach_home_intro_title">Welcome to Vortex</string>
+    <string name="coach_home_intro_text">This is your control hub. From here you can connect a device, pick effects, set a solid color, and adjust brightness.</string>
+
+    <string name="coach_home_status_title">Connection status</string>
+    <string name="coach_home_status_text">Shows whether you’re disconnected, connecting, or connected. When connected, you’ll also see the device alias.</string>
+
+    <string name="coach_home_select_device_title">Select Device</string>
+    <string name="coach_home_select_device_text">Open the device picker to scan and connect. You can manage saved aliases and see signal strength on the next screen.</string>
+
+    <string name="coach_home_effects_title">Effects</string>
+    <string name="coach_home_effects_text">Browse dynamic animations (waves, twinkles, etc.). Apply instantly to your connected LEDs.</string>
+
+    <string name="coach_home_solid_color_title">Solid Color</string>
+    <string name="coach_home_solid_color_text">Pick a single color for your LEDs. Great for quick ambient lighting.</string>
+
+    <string name="coach_home_brightness_title">Brightness</string>
+    <string name="coach_home_brightness_text">Slide to change global LED brightness. Changes apply live when a device is connected.</string>
+
+    <string name="coach_home_menu_overview_title">Bottom menu</string>
+    <string name="coach_home_menu_overview_text">Quick navigation: Home, Effects, Solid Color, and Settings.</string>
+
+    <string name="coach_home_menu_item_home_title">Menu · Home</string>
+    <string name="coach_home_menu_item_home_text">You’re here. The dashboard shows status, quick actions, and brightness.</string>
+
+    <string name="coach_home_menu_item_effects_title">Menu · Effects</string>
+    <string name="coach_home_menu_item_effects_text">Open the effects browser to pick and apply animations.</string>
+
+    <string name="coach_home_menu_item_solid_color_title">Menu · Solid Color</string>
+    <string name="coach_home_menu_item_solid_color_text">Choose a single color and apply it instantly.</string>
+
+    <string name="coach_home_menu_item_settings_title">Menu · Settings</string>
+    <string name="coach_home_menu_item_settings_text">Theme, haptics, and app info. Reset tutorials or copy debug info from here.</string>
+
+    <!-- Home screen — scene preview card -->
+    <string name="coach_home_scene_preview_title">Active Mode</string>
+    <string name="coach_home_scene_preview_text">This card shows what your LEDs are currently doing. It updates live whenever the mode changes.</string>
+    <string name="coach_home_suggested_title">Smart Suggestion</string>
+    <string name="coach_home_suggested_text">Based on your history, this is the next mode worth trying. Tap it to apply instantly — no need to open Effects or Solid Color first.</string>
+    <!-- Select Device: coach intro -->
+    <string name="coach_select_device_intro_title">Select &amp; connect</string>
+    <string name="coach_select_device_intro_text">Scan for nearby BLE devices, see signal strength, and tap to connect. You can also open device options and rename saved entries.</string>
+
+    <!-- Solid Color screen coach -->
+    <string name="coach_solid_intro_title">Solid Color</string>
+    <string name="coach_solid_intro_text">Pick a single color and apply it to your LEDs. You can fine-tune via picker, HEX, or RGB.</string>
+
+    <string name="coach_solid_preview_title">Preview</string>
+    <string name="coach_solid_preview_text">Shows the color you’re about to send. It updates live as you edit.</string>
+
+    <string name="coach_solid_picker_title">Color picker</string>
+    <string name="coach_solid_picker_text">Drag to choose a hue and shade. Great for quick, visual selection.</string>
+
+    <string name="coach_solid_hex_title">HEX input</string>
+    <string name="coach_solid_hex_text">Type a color like #8E05C2. Invalid values will prompt a hint so you can fix them.</string>
+
+    <string name="coach_solid_rgb_title">RGB values</string>
+    <string name="coach_solid_rgb_text">Adjust Red, Green, and Blue components precisely. Values sync with the picker and HEX.</string>
+
+    <string name="coach_solid_apply_title">Apply color</string>
+    <string name="coach_solid_apply_text">Send the selected color to the connected device. Works best when a device is connected.</string>
+
+    <string name="coach_solid_saved_title">Saved colors</string>
+    <string name="coach_solid_saved_text">Quick slots for your favorites. Tap to recall; long-press to overwrite with the current color.</string>
+
+    <!-- Effects screen coach -->
+    <string name="coach_effects_intro_title">Effects</string>
+    <string name="coach_effects_intro_text">Browse animations and set the vibe—waves, pulses, and more. Select to apply instantly.</string>
+
+    <string name="coach_effects_list_title">Effect list</string>
+    <string name="coach_effects_list_text">Scroll through available effects. The focused card is the one you’re selecting.</string>
+
+    <string name="coach_effects_focus_title">Focus &amp; selection</string>
+    <string name="coach_effects_focus_text">This overlay highlights the currently centered effect. Scroll to snap; tap to apply.</string>
+    <string name="coach_select_device_name_title">Device Name</string>
+    <string name="coach_select_device_name_text">The device’s display name (or your saved alias). Use it to quickly identify the device in the list.</string>
+    <string name="coach_default_text">Body</string>
+    <string name="coach_default_title">Title</string>
+    <string name="coach_default_counter">1/1</string>
+    <string name="coach_counter_format">%1$d / %2$d</string>
+
+</resources>

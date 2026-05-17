@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Select Device screen -->
+    <string name="activity_select_device_title">Select Device</string>
+    <string name="select_device_scan_btn">Scan</string>
+    <string name="select_device_burger_menu_desc">Options</string>
+    <string name="refreshing">Refreshing…</string>
+
+    <!-- Device list item -->
+    <string name="default_device_name">Device Name</string>
+    <string name="select_device_item_desc">Bluetooth Device</string>
+    <string name="select_device_item_address_default">00:00:00:00:00:00</string>
+
+    <!-- Overflow menu -->
+    <string name="select_device_refresh_device_list">Refresh Device List</string>
+    <string name="select_device_go_to_sandbox">Sandbox</string>
+    <string name="open_bluetooth_settings">Open Bluetooth settings</string>
+
+</resources>

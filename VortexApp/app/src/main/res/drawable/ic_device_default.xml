@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+        android:viewportWidth="512"
+        android:viewportHeight="512"
+        android:width="512dp"
+        android:height="512dp">
+    <path
+            android:pathData="M59.5 77L417.5 77Q427.8 78.8 433 85.5Q437.7 90.3 439 98.5L439 174L499.5 174L507 179.5L509 183.5L509 424.5L506 431L498.5 435L136.5 435L132 431.5Q129.3 427.7 131 419.5L136 403.5L146.5 392L161.5 385L203 385L203 360.5L202.5 360L124 360L124 424.5Q122.8 430.3 118.5 433L113.5 435L12.5 435L4 428.5L3 426.5L3 233.5L8.5 226L12.5 224L38 224L38 99.5Q40 89 46.5 83Q51.3 78.3 59.5 77ZM61 92L59 93L53 101L53 224L114 224L119 226Q123 229 124 235L124 286L125 286L309 286L309 184L311 180L319 174L424 174L424 101L423 98L417 92L61 92ZM324 189L324 420L494 420L494 189L324 189ZM18 239L18 253L19 253L109 253L109 240L109 239L18 239ZM18 268L18 391L109 391L109 268L18 268ZM124 300L124 345L125 345L309 345L309 301L309 300L124 300ZM218 360L218 385L260 385L260 360L218 360ZM274 360L274 385L309 385L309 360L274 360ZM170 399Q168 401 164 400L156 404Q148 408 147 419L147 420L309 420L309 420L309 400L307 399L170 399ZM18 406L18 420L19 420L109 420L109 407L109 406L18 406Z"
+            android:fillColor="?attr/vortexIconPrimary"
+            android:fillAlpha="0.9294118"
+            android:strokeColor="?attr/vortexIconPrimary"
+            android:strokeAlpha="0.9294118"
+            android:strokeWidth="1" />
+    <path
+            android:pathData="M336.5 197L481.5 197L485 199.5L486 201.5L486 393.5L483.5 397L481.5 398L336.5 398L333 395.5L332 393.5L332 201.5L334.5 198L336.5 197ZM347 212L347 383L471 383L471 212L347 212Z"
+            android:fillColor="?attr/vortexIconPrimary"
+            android:fillAlpha="0.9294118"
+            android:strokeColor="?attr/vortexIconPrimary"
+            android:strokeAlpha="0.9294118"
+            android:strokeWidth="1" />
+
+    <path android:pathData="M238.5,322m-10,0a10,10 0 1,0 20,0a10,10 0 1,0 -20,0"
+            android:fillColor="?attr/vortexIconPrimary" android:fillAlpha="0.9294118"
+            android:strokeColor="?attr/vortexIconPrimary" android:strokeAlpha="0.9294118" android:strokeWidth="1"/>
+    
+    <path android:pathData="M409,409m-7,0a7,7 0 1,0 14,0a7,7 0 1,0 -14,0"
+            android:fillColor="?attr/vortexIconPrimary" android:fillAlpha="0.9294118"
+            android:strokeColor="?attr/vortexIconPrimary" android:strokeAlpha="0.9294118" android:strokeWidth="1"/>
+</vector>

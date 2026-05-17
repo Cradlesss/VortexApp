@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="16dp"
+    android:insetRight="16dp"
+    android:insetTop="16dp"
+    android:insetBottom="16dp">
+
+    <shape android:shape="rectangle">
+        <solid android:color="?attr/vortexBgSecondary"/>
+        <corners android:radius="@dimen/corner_radius_lg"/>
+        <stroke
+            android:width="@dimen/stroke_regular"
+            android:color="?attr/vortexUiMain"/>
+    </shape>
+</inset>

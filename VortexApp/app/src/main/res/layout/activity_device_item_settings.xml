@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/device_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/vortexBgPrimary"
+        android:fitsSystemWindows="true">
+
+    <FrameLayout
+            android:id="@+id/back_button_frame"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:theme="@style/ripple_btn.borderless"
+            android:foreground="@drawable/fg_ripple_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_back_button"
+                android:clickable="false"
+                android:contentDescription="@string/back_btn_desc"
+                android:focusable="false" />
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/device_settings_tile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/device_settings_title"
+            android:textColor="?attr/vortexUiMain"
+            android:textSize="@dimen/text_size_screen_title"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/back_button_frame"
+            app:layout_constraintEnd_toStartOf="@id/forget_button"
+            app:layout_constraintStart_toEndOf="@id/back_button_frame"
+            app:layout_constraintTop_toTopOf="@id/back_button_frame" />
+
+    <FrameLayout
+            android:id="@+id/forget_button"
+            android:layout_width="104dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/bg_device_forget_pill"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@id/device_settings_tile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/device_settings_tile">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+            <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:clickable="false"
+                    android:contentDescription="@string/forget"
+                    android:focusable="false"
+                    android:src="@drawable/ic_unpair"
+                    app:tint="@color/error_color" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/forget"
+                    android:textColor="@color/error_color"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+            android:id="@+id/device_content_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/device_actions_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_button_frame">
+
+        <LinearLayout
+                android:id="@+id/device_summary_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_vortex_card"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/device"
+                        android:textColor="?attr/vortexTextSecondary"
+                        android:textSize="13sp" />
+
+                <TextView
+                        android:id="@+id/device_name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/default_device_name"
+                        android:textColor="?attr/vortexTextPrimary"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/device_status_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_dialog"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/device_status_label"
+                        android:textColor="?attr/vortexTextPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                    android:id="@+id/device_icon"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="14dp"
+                    android:alpha="0.85"
+                    android:contentDescription="@string/device_icon_desc"
+                    android:src="@drawable/ic_device_default" />
+        </LinearLayout>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/device_info_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:cardBackgroundColor="?attr/vortexBgSecondary"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/details"
+                        android:textColor="?attr/vortexTextSecondary"
+                        android:textSize="13sp" />
+
+                <TextView
+                        android:id="@+id/info_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/mode"
+                        android:textColor="?attr/vortexTextPrimary"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/info_brightness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/brightness"
+                        android:textColor="?attr/vortexTextPrimary"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/info_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/color"
+                        android:textColor="?attr/vortexTextPrimary"
+                        android:textSize="14sp" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="?attr/vortexSeparator" />
+
+                <TextView
+                        android:id="@+id/info_fw_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/firmware"
+                        android:textColor="?attr/vortexTextPrimary"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/info_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/model"
+                        android:textColor="?attr/vortexTextPrimary"
+                        android:textSize="14sp" />
+
+                <TextView
+                        android:id="@+id/info_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/address"
+                        android:textColor="?attr/vortexTextSecondary"
+                        android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/auto_connect_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                app:cardBackgroundColor="?attr/vortexBgSecondary"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="18dp">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/auto_connect"
+                            android:textColor="?attr/vortexTextPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/auto_connect_desc"
+                            android:textColor="?attr/vortexTextSecondary"
+                            android:textSize="13sp" />
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_auto_connect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:thumbTint="@color/switch_thumb_tint"
+                        app:trackTint="@color/switch_track_tint"
+                        app:rippleColor="@color/switch_ripple_tint" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <FrameLayout
+            android:id="@+id/device_actions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_nav_background"
+            android:elevation="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/device_actions_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:elevation="0dp"
+                app:itemIconTint="@color/bottom_nav_item_tint"
+                app:itemTextColor="@color/bottom_nav_item_tint"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/device_settings_actions_menu" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

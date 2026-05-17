@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root_layout"
+        android:background="?attr/vortexBgPrimary"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:id="@+id/back_button_frame"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:theme="@style/ripple_btn.borderless"
+            android:foreground="@drawable/fg_ripple_button"
+            android:layout_marginTop="@dimen/padding_md"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:focusable="false"
+                android:clickable="false"
+                android:background="@drawable/ic_back_button"
+                android:contentDescription="@string/back_btn_desc"/>
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/header_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textSize="@dimen/text_size_screen_title"
+            android:textStyle="bold"
+            android:textColor="?attr/vortexUiMain"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/back_button_frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back_button_frame"
+            app:layout_constraintBottom_toBottomOf="@id/back_button_frame" />
+
+    <ScrollView
+            android:id="@+id/settings_scroll"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@id/back_button_frame"
+            app:layout_constraintBottom_toTopOf="@id/bottom_nav_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/section_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_section_app"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="?attr/vortexTextPrimary"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"/>
+
+            <FrameLayout
+                    android:id="@+id/row_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:theme="@style/ripple_btn.fill_gray"
+                    android:background="@drawable/fg_ripple_button"
+                    android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                    <TextView
+                            android:id="@+id/theme_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_theme"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="?attr/vortexUiMain"/>
+
+                    <TextView
+                            android:id="@+id/theme_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_theme_system"
+                            android:textSize="13sp"
+                            android:textColor="?attr/vortexTextPrimary"
+                            android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/row_haptics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ripple_btn.fill_gray"
+                    android:background="@drawable/fg_ripple_button"
+                    android:layout_marginBottom="18dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/settings_haptics"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="?attr/vortexUiMain"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/settings_haptics_desc"
+                                android:textSize="13sp"
+                                android:textColor="?attr/vortexTextPrimary"
+                                android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_haptics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:thumbTint="@color/switch_thumb_tint"
+                            app:trackTint="@color/switch_track_tint"
+                            app:rippleColor="@color/switch_ripple_tint" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                    android:id="@+id/section_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_section_help"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="?attr/vortexTextPrimary"
+                    android:layout_marginBottom="8dp"/>
+
+            <FrameLayout
+                    android:id="@+id/row_reset_tutorials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:theme="@style/ripple_btn.fill_gray"
+                    android:background="@drawable/fg_ripple_button"
+                    android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_reset_tutorials"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="?attr/vortexUiMain"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_reset_tutorials_desc"
+                            android:textSize="13sp"
+                            android:textColor="?attr/vortexTextPrimary"
+                            android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/row_copy_debug"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:theme="@style/ripple_btn.fill_gray"
+                    android:background="@drawable/fg_ripple_button"
+                    android:layout_marginBottom="18dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_copy_debug"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="?attr/vortexUiMain"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_copy_debug_desc"
+                            android:textSize="13sp"
+                            android:textColor="?attr/vortexTextPrimary"
+                            android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                    android:id="@+id/section_legal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_section_legal"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="?attr/vortexTextPrimary"
+                    android:layout_marginBottom="8dp"/>
+
+            <FrameLayout
+                    android:id="@+id/row_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:theme="@style/ripple_btn.fill_gray"
+                    android:background="@drawable/fg_ripple_button"
+                    android:layout_marginBottom="10dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:text="@string/settings_about"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="?attr/vortexUiMain"/>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/row_terms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:theme="@style/ripple_btn.fill_gray"
+                    android:background="@drawable/fg_ripple_button"
+                    android:layout_marginBottom="10dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:text="@string/settings_terms"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="?attr/vortexUiMain"/>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/row_privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:theme="@style/ripple_btn.fill_gray"
+                    android:background="@drawable/fg_ripple_button"
+                    android:layout_marginBottom="6dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:text="@string/settings_privacy"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="?attr/vortexUiMain"/>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+            android:id="@+id/bottom_nav_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_nav_background"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:elevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:elevation="0dp"
+                app:menu="@menu/bottom_navigation_menu"
+                app:itemIconTint="@color/bottom_nav_item_tint"
+                app:itemTextColor="@color/bottom_nav_item_tint"
+                app:labelVisibilityMode="labeled"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

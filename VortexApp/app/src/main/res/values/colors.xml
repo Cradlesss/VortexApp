@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Actually used colors -->
+    <color name="ui_main_color">#8E05C2</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="error_color">#FF0000</color>
+    <color name="red">#E74C3C</color>
+    <color name="green">#2ECC71</color>
+    <color name="blue">#3498DB</color>
+    <color name="purple_fill">#700B97</color>
+
+    <!-- Vortex theme palette light -->
+    <color name="vortex_light_bg_primary">#F6F6F6</color>
+    <color name="vortex_light_bg_secondary">#FFFFFF</color>
+    <color name="vortex_light_text_primary">#121212</color>
+    <color name="vortex_light_text_secondary">#666666</color>
+    <color name="vortex_light_ui_secondary">#33000000</color>
+    <color name="vortex_light_popup_menu_background">@color/white</color>
+    <color name="vortex_light_ripple">#22000000</color>
+    <color name="vortex_light_rounded_bg">#700B97</color>
+    <color name="vortex_light_icon_primary">#121212</color>
+    <color name="vortex_light_focus_ring">#22000000</color>
+    <color name="vortex_light_separator">#1A000000</color>
+
+    <!-- Vortex theme palette dark -->
+    <color name="vortex_dark_bg_primary">#1A1A1A</color>
+    <color name="vortex_dark_bg_secondary">#2A2A2A</color>
+    <color name="vortex_dark_text_primary">#FFFFFFFF</color>
+    <color name="vortex_dark_text_secondary">#BDBDBD</color>
+    <color name="vortex_dark_ui_secondary">#2A2A2A</color>
+    <color name="vortex_dark_ripple">#99444444</color>
+    <color name="vortex_dark_popup_menu_background">@color/vortex_dark_ui_secondary</color>
+    <color name="vortex_dark_rounded_bg">#DDDDDD</color>
+    <color name="vortex_dark_icon_primary">#FFFFFFFF</color>
+    <color name="vortex_dark_focus_ring">#33FFFFFF</color>
+    <color name="vortex_dark_separator">#33FFFFFF</color>
+</resources>

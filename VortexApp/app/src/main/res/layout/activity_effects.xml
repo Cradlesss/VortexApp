@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/animations_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/vortexBgPrimary"
+    android:fitsSystemWindows="true"
+    android:paddingTop="16dp">
+
+    <FrameLayout
+        android:id="@+id/back_button_frame"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:theme="@style/ripple_btn.borderless"
+        android:foreground="@drawable/fg_ripple_button"
+        android:layout_marginTop="@dimen/padding_md"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:focusable="false"
+            android:clickable="false"
+            android:background="@drawable/ic_back_button"
+            android:contentDescription="@string/back_btn_desc"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/device_settings_tile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/effects_title"
+        android:textSize="@dimen/text_size_screen_title"
+        android:textStyle="bold"
+        android:textColor="?attr/vortexUiMain"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/back_button_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_button_frame"
+        app:layout_constraintBottom_toBottomOf="@id/back_button_frame" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/effects_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/back_button_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_container" />
+
+    <View
+        android:id="@+id/effects_overlay"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/overlay_focus_ring"
+        android:clickable="false"
+        android:focusable="false"
+        android:importantForAccessibility="no"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/effects_recycler"
+        app:layout_constraintBottom_toBottomOf="@id/effects_recycler"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <FrameLayout
+        android:id="@+id/bottom_nav_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_nav_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:elevation="8dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconTint="@color/bottom_nav_item_tint"
+            app:itemTextColor="@color/bottom_nav_item_tint"
+            app:labelVisibilityMode="labeled"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

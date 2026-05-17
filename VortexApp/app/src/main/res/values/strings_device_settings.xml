@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Device Item Settings screen -->
+    <string name="device_settings_title">Device settings</string>
+    <string name="settings">Device Settings</string>
+    <string name="device">Device</string>
+    <string name="details">Details</string>
+    <string name="device_status_label">Status:</string>
+    <string name="device_icon_desc">Device Icon</string>
+    <string name="device_status_format">Status: %1$s</string>
+    <string name="auto_connect">Auto-connect</string>
+    <string name="auto_connect_desc">Use this device on app launch</string>
+
+    <!-- Connection states -->
+    <string name="not_paired">Not paired</string>
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting</string>
+    <string name="disconnecting">Disconnecting</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="rename">Rename</string>
+    <string name="rename_name_sent">Name saved — will apply on next device boot</string>
+    <string name="forget">Forget</string>
+    <string name="test">Test</string>
+
+    <!-- Device info labels (layout placeholders) -->
+    <string name="mode">Mode: —</string>
+    <string name="brightness">Brightness: —</string>
+    <string name="color">Color: —</string>
+    <string name="firmware">Firmware: —</string>
+    <string name="model">Model: —</string>
+    <string name="address">Address: —</string>
+
+    <!-- Device info format strings (set from code) -->
+    <string name="info_mode">Mode: %s</string>
+    <string name="info_brightness">Brightness: %d</string>
+    <string name="info_color">Color: rgb(%1$d, %2$d, %3$d)</string>
+    <string name="info_fw_version">Firmware: v%1$d.%2$d.%3$d</string>
+    <string name="info_model">Model ID: %d</string>
+    <string name="info_address">Address: %s</string>
+
+    <!-- Ping -->
+    <string name="ping_result_title">Ping Result</string>
+    <string name="ping_result_msg">pong in %1$d ms (token %2$d)</string>
+
+</resources>

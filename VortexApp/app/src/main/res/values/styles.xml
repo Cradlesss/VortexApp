@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="select_device_popup_menu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_popup_purple_stroke</item>
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:itemTextAppearance">@style/popup_menu_text_style</item>
+    </style>
+
+    <style name="popup_menu_text_style" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/vortexTextPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="ripple_btn">
+        <item name="corner_radius">@dimen/corner_radius_lg</item>
+        <item name="padding_h">@dimen/padding_md</item>
+        <item name="padding_v">@dimen/padding_sm</item>
+        <item name="fill_color">@android:color/transparent</item>
+        <item name="ripple_color">?attr/vortexRipple</item>
+        <item name="stroke_width">@dimen/stroke_regular</item>
+        <item name="stroke_color">@android:color/transparent</item>
+    </style>
+
+    <style name="ripple_btn.white_outline" parent="@style/ripple_btn">
+        <item name="stroke_color">?attr/vortexRoundedBg</item>
+    </style>
+
+    <style name="ripple_btn.purple_outline" parent="@style/ripple_btn">
+        <item name="stroke_color">?attr/vortexUiMain</item>
+        <item name="stroke_width">@dimen/stroke_regular</item>
+    </style>
+
+    <style name="ripple_btn.borderless" parent="@style/ripple_btn">
+        <item name="stroke_width">0dp</item>
+        <item name="stroke_color">@android:color/transparent</item>
+    </style>
+
+    <style name="ripple_btn.fill_gray" parent="@style/ripple_btn">
+        <item name="fill_color">?attr/vortexUiSecondary</item>
+        <item name="stroke_width">@dimen/stroke_regular</item>
+        <item name="stroke_color">?attr/vortexUiMain</item>
+        <item name="corner_radius">@dimen/corner_radius_sm</item>
+        <item name="padding_v">0dp</item>
+        <item name="padding_h">0dp</item>
+    </style>
+
+    <style name="ripple_btn.fill_purple" parent="@style/ripple_btn">
+        <item name="fill_color">?attr/vortexButtonPurple</item>
+        <item name="stroke_width">0dp</item>
+        <item name="corner_radius">@dimen/corner_radius_md</item>
+        <item name="padding_v">@dimen/padding_md</item>
+        <item name="padding_h">@dimen/padding_md</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+</resources>

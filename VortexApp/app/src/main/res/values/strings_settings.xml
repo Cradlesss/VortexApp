@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_section_app">APP</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_haptics">Haptics</string>
+    <string name="settings_haptics_desc">Tick feedback on taps and navigation</string>
+    <string name="settings_section_help">HELP</string>
+    <string name="settings_reset_tutorials">Reset tutorials</string>
+    <string name="settings_reset_tutorials_desc">Show all guides again</string>
+    <string name="settings_copy_debug">Copy debug info</string>
+    <string name="settings_copy_debug_desc">Useful for bug reports</string>
+    <string name="settings_section_legal">LEGAL</string>
+    <string name="settings_about">About us</string>
+    <string name="settings_terms">Terms of Service</string>
+    <string name="settings_privacy">Privacy Policy</string>
+    <string name="settings_reset_tutorials_confirm">This will reset all tutorials popups. Continue?</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_about_body">VortexApp\nProject Void</string>
+    <string name="settings_terms_body">By using VortexApp you agree to use it in accordance with applicable laws and regulations. This application is provided as-is without warranty of any kind.\n\nFor full terms, please contact the developer.</string>
+    <string name="settings_privacy_body">VortexApp connects to Bluetooth devices on your behalf. We do not collect, store, or share personal data with third parties.\n\nBluetooth and location permissions are required solely to scan for and connect to BLE devices.</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_light">Light</string>
+
+</resources>

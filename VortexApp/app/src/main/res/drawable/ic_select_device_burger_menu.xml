@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="512"
+    android:viewportHeight="512"
+    android:width="512dp"
+    android:height="512dp">
+    <path
+        android:pathData="M28.5 75L483.5 75Q498.8 77.7 506 88.5L509 93.5L512 106.5L510 117.5L501.5 130Q495.5 136 485.5 138L26.5 138Q15.3 135.7 9 128.5L2 117.5L0 106.5L4 91.5L13.5 81L20.5 77L28.5 75Z"
+        android:fillColor="?attr/vortexIconPrimary"
+        android:strokeColor="?attr/vortexIconPrimary"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M31.5 224L480.5 224Q482 226.5 487.5 225L496.5 229L505 236.5L511 248.5L511 263.5Q507.6 274.6 499.5 281L490.5 286L479.5 288L32.5 288L21.5 286Q12.5 282.5 7 275.5L1 263.5L1 248.5Q4.4 237.4 12.5 231L21.5 226L31.5 224Z"
+        android:fillColor="?attr/vortexIconPrimary"
+        android:strokeColor="?attr/vortexIconPrimary"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M26.5 374L485.5 374Q497.5 376.5 504 384.5L510 394.5L512 405.5L508 420.5L498.5 431L491.5 435L483.5 437L28.5 437Q13.2 434.3 6 423.5L3 418.5L0 405.5L2 394.5L10.5 382Q16.5 376 26.5 374Z"
+        android:fillColor="?attr/vortexIconPrimary"
+        android:strokeColor="?attr/vortexIconPrimary"
+        android:strokeWidth="1" />
+</vector>
