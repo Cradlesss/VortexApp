@@ -65,6 +65,7 @@ public final class BackgroundBluetoothLeService extends Service {
     private boolean notificationEnabled = false;
     private boolean ctrlNotificationsEnabled = false;
     private boolean keepaliveRunning = false;
+    private boolean isGattConnected = false;
     private final Set<Messenger> clients = new CopyOnWriteArraySet<>();
     private final SparseLongArray pingT0 = new SparseLongArray();
     private final Runnable keepalivePingRunnable = new Runnable() {
@@ -407,8 +408,15 @@ public final class BackgroundBluetoothLeService extends Service {
     }
 
     public void registerClient(Messenger m) {
-        if (m != null)
-            clients.add(m);
+        if (m == null) return;
+        clients.add(m);
+        if (isGattConnected) {
+            Bundle b = new Bundle();
+            b.putString("address", currentAddress);
+            sendTo(m, BleConstants.MSG_CONNECTED, b);
+        } else {
+            sendTo(m, BleConstants.MSG_DISCONNECT, null);
+        }
     }
 
     public void unregisterClient(Messenger m) {
@@ -416,8 +424,19 @@ public final class BackgroundBluetoothLeService extends Service {
             clients.remove(m);
     }
 
+    private void sendTo(Messenger m, int what, Bundle data) {
+        try {
+            Message msg = Message.obtain(null, what);
+            if (data != null) msg.setData(data);
+            m.send(msg);
+        } catch (Exception e) {
+            if (BuildConfig.DEBUG) Log.e(TAG, "sendTo failed", e);
+        }
+    }
+
     private void emitConnected(String address) {
         if (BuildConfig.DEBUG) Log.d(TAG, "emitConnected: " + address);
+        isGattConnected = true;
         NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         if (nm != null) nm.cancel(VortexNotification.ID_BLE_DISCONNECT);
         updateConnectedNotification();
@@ -431,6 +450,7 @@ public final class BackgroundBluetoothLeService extends Service {
     }
 
     private void emitDisconnected() {
+        isGattConnected = false;
         sendAll(BleConstants.MSG_DISCONNECT, null);
         String name = currentDisplayName != null ? currentDisplayName : currentAddress != null ? currentAddress : "";
         VortexNotification.postDisconnected(this, name);

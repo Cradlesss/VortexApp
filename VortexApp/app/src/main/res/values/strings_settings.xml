@@ -17,7 +17,7 @@
     <string name="settings_reset_tutorials_confirm">This will reset all tutorials popups. Continue?</string>
     <string name="settings_title">Settings</string>
     <string name="settings_about_body">VortexApp\nProject Void</string>
-    <string name="settings_terms_body">By using VortexApp you agree to use it in accordance with applicable laws and regulations. This application is provided as-is without warranty of any kind.\n\nFor full terms, please contact the developer.</string>
+    <string name="settings_terms_body">By using VortexApp you agree to these terms.\n\nThis application is provided \"as-is\", without warranty of any kind, express or implied. The developer makes no guarantees regarding fitness for a particular purpose or uninterrupted operation.\n\nYou are solely responsible for any use of this software and for any interactions with Bluetooth devices it controls. The developer is not liable for any damages arising from the use or inability to use this application.\n\nVortexApp is open-source software. You may use, modify, and distribute it in accordance with its license. You can find the license here: https://github.com/Project-Void-Studio/VortexApp</string>
     <string name="settings_privacy_body">VortexApp connects to Bluetooth devices on your behalf. We do not collect, store, or share personal data with third parties.\n\nBluetooth and location permissions are required solely to scan for and connect to BLE devices.</string>
     <string name="settings_theme_dark">Dark</string>
     <string name="settings_theme_light">Light</string>

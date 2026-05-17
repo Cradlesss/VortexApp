@@ -4,6 +4,19 @@ All notable changes are documented here.
 
 ---
 
+## [2.0.1] – 2026-05-18
+
+### VortexApp (Android) — Hotfix
+
+**Bug fixes**
+- Fixed a crash on Gradle sync when `keystore.properties` is missing — null values were being cast to `String` unconditionally. The signing config is now only applied when the file exists; release builds fall back to debug signing so the project works out of the box for anyone cloning the repo.
+- Fixed the home screen not updating after disconnecting via the notification while the app is in the background — the BLE service was emitting `MSG_DISCONNECT` to an empty client set because the repository had already unregistered its messenger on app background. The service now syncs its current connection state to any newly registered client, so the UI is always consistent when the app returns to the foreground.
+
+**Changes**
+- Terms of Service expanded with explicit no-warranty, no-liability, and open-source/license clauses including a tappable link to the repository.
+
+---
+
 ## [2.0.0] – 2025-05-17
 
 Complete rewrite of both the Android app and the firmware. The two components have been restructured, renamed, and rebuilt from the ground up.
