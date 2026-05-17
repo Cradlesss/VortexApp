@@ -1,6 +1,6 @@
-# Changelog
+# VortexApp – Changelog
 
-All notable changes to Project Void are documented here.
+All notable changes are documented here.
 
 ---
 

@@ -1,6 +1,6 @@
-# Project Void
+# VortexApp
 
-Project Void is an open-source BLE ecosystem for controlling addressable LED strips from an Android device. It is made up of two components:
+VortexApp is an open-source BLE ecosystem for controlling addressable LED strips from an Android device. It is made up of two components:
 
 - **VortexApp** – Android application (API 29+) for discovering, connecting, and controlling compatible devices over Bluetooth Low Energy.
 - **VortexCore** – Firmware for nRF52840-based microcontrollers that receives commands and drives the LED strip.
@@ -30,6 +30,10 @@ Project Void is an open-source BLE ecosystem for controlling addressable LED str
 ## Installation
 
 ### VortexApp (Android)
+
+The latest release APK is available on the [Releases](../../releases) page — no build step required.
+
+To build from source:
 
 1. Clone the repository.
 2. Open the `VortexApp/` directory in Android Studio.
@@ -97,7 +101,7 @@ New effects can be added to the firmware by implementing `IEffect` and registeri
 ## Project structure
 
 ```
-Project Void/
+VortexApp/
 ├── VortexApp/          Android application (Gradle, Java)
 │   └── app/src/
 │       ├── ble/        BLE service, session repository, protocol
